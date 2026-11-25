@@ -2,44 +2,33 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/bg_gradient"
-    android:gravity="center"
     android:orientation="vertical"
-    android:padding="24dp">
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:letterSpacing="0.2"
-        android:text="юмани · терминал"
-        android:textColor="#B8FFFFFF"
-        android:textSize="18sp"/>
-
-    <TextView
-        android:id="@+id/tvCode"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
-        android:fontFamily="sans-serif-medium"
-        android:text="000000"
-        android:textColor="#FFFFFF"
-        android:textSize="72sp"/>
+    android:gravity="center"
+    android:background="#1A1A1D">
 
     <TextView
         android:id="@+id/tvStatus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:text="ожидание пульта…"
-        android:textColor="#7CFC9B"
-        android:textSize="18sp"/>
+        android:textColor="#A1A1AA"
+        android:textSize="18sp" />
 
     <TextView
-        android:id="@+id/tvHint"
+        android:id="@+id/tvCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:gravity="center"
-        android:textColor="#88FFFFFF"
-        android:textSize="14sp"/>
+        android:layout_marginTop="16dp"
+        android:text="000000"
+        android:textColor="#FFFFFF"
+        android:textSize="72sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/btnTest"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="тестовый экран оплаты" />
+
 </LinearLayout>
