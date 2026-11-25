@@ -1,6 +1,5 @@
 package ru.yumani.terminal
 
-import android.content.Context
 import android.graphics.Bitmap
 import android.media.MediaPlayer
 import android.os.Bundle
@@ -32,12 +31,9 @@ class PaymentActivity : AppCompatActivity() {
         successPlayer = MediaPlayer.create(this, R.raw.success)
         failPlayer = MediaPlayer.create(this, R.raw.fail)
 
-        // QR: payload вида yumani://pay?terminal=КОД&amount=СУММА
         val payload = "yumani://pay?terminal=$code&amount=$amount"
         val size = 512
-        val matrix = QRCodeWriter().encode(
-            payload, BarcodeFormat.QR_CODE, size, size
-        )
+        val matrix = QRCodeWriter().encode(payload, BarcodeFormat.QR_CODE, size, size)
         val bmp = Bitmap.createBitmap(size, size, Bitmap.Config.RGB_565)
         for (x in 0 until size) {
             for (y in 0 until size) {
@@ -47,7 +43,6 @@ class PaymentActivity : AppCompatActivity() {
         findViewById<ImageView>(R.id.ivQr).setImageBitmap(bmp)
     }
 
-    /** Вызывается, когда пульт подтвердил оплату */
     fun onPaymentResult(success: Boolean) {
         if (success) {
             successPlayer?.start()
