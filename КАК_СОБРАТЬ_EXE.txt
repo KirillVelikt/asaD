@@ -1,0 +1,18 @@
+КАК ПОЛУЧИТЬ EXE И УСТАНОВЩИК (два пути)
+=========================================
+
+ПУТЬ 1 — GitHub делает всё сам (рекомендую):
+1. Залей весь проект на GitHub (python new.py).
+2. Вкладка Actions -> дождись зелёной галочки у "Build EXE + Installer".
+3. Внизу запуска скачай два артефакта:
+   - TerminalControl-EXE        (готовый TerminalControl.exe)
+   - TerminalControl-Installer  (TerminalControlSetup.exe — установщик с ярлыками)
+4. TerminalControlSetup.exe запускаешь на любом ПК — пульт ставится как обычная программа.
+
+ПУТЬ 2 — сборка у себя на ПК:
+1. Установи Python с python.org (галочка Add to PATH!).
+2. pip install pyinstaller
+3. В папке проекта: pyinstaller --onefile --noconsole --name TerminalControl pc-control/terminal_control.py
+4. Готовый exe будет в папке dist/.
+5. (опционально) Установи Inno Setup с jrsoftware.org и собери установщик:
+   "C:\Program Files (x86)\Inno Setup 6\ISCC.exe" installer\terminal_installer.iss

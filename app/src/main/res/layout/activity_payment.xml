@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:letterSpacing="0.15"
+            android:text="оплата"
+            android:textColor="#88FFFFFF"
+            android:textSize="16sp"/>
+
+        <ImageView
+            android:id="@+id/btnClose"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:contentDescription="закрыть"
+            android:padding="6dp"
+            android:src="@drawable/ic_close"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="0 ₽"
+        android:textColor="#FFFFFF"
+        android:textSize="44sp"/>
+
+    <TextView
+        android:id="@+id/tvBig"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:fontFamily="sans-serif-medium"
+        android:text="платите как вам удобно"
+        android:textColor="#FFFFFF"
+        android:textSize="26sp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/cardSmile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_green"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="18dp">
+
+            <ImageView
+                android:layout_width="72dp"
+                android:layout_height="72dp"
+                android:contentDescription="улыбка"
+                android:src="@drawable/ic_smile"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:text="оплатить
+улыбкой ›"
+                android:textColor="#14361B"
+                android:textSize="18sp"/>
+        </LinearLayout>
+
+        <Space android:layout_width="12dp" android:layout_height="1dp"/>
+
+        <LinearLayout
+            android:id="@+id/cardQr"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/card_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+            <ImageView
+                android:id="@+id/ivQr"
+                android:layout_width="110dp"
+                android:layout_height="110dp"
+                android:contentDescription="QR"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="по QR"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Space android:layout_width="1dp" android:layout_height="0dp" android:layout_weight="1"/>
+
+    <TextView
+        android:id="@+id/tvTerm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Терминал: —"
+        android:textColor="#66FFFFFF"
+        android:textSize="13sp"/>
+</LinearLayout>
